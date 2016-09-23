@@ -213,7 +213,7 @@ footer > p {
 	
 	
 }
-@media screen and (max-device-width: 768px), 
+@media screen and (device-width: 320px), 
 	   screen  and (max-width: 768px){
 	body > header, body > main, body > footer {
 		width: 100%;
