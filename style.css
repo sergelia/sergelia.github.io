@@ -220,7 +220,10 @@ body > main {
 	
 	
 }
-@media screen and (device-width: 320px), 
+@media screen and (device-width: 320px)
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait), 
 	   screen  and (max-width: 768px){
 	body > header, body > main, body > footer {
 		width: 100%;
