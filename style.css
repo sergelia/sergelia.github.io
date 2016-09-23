@@ -144,16 +144,6 @@ footer > p {
 	font-size: 0;
 	transition:  background-color 1s, visibility 1s;
 }
-.tags li:hover span {
-	visibility: visible;
-	background-color: #B2A2AD;
-	color: #512443;
-	font-size: inherit;
-	z-index: 3;
-	width: 150px;
-	min-height: 1.5em;
-	padding: 1em;
-}
 
 /* Cards */
 
@@ -178,6 +168,17 @@ footer > p {
 	font-family: 'Francois One', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+body > header, body > main, body > footer {
+	width: 100%;
+	padding: 15px;
+}
+article, .card {
+	width: 100%;
+}
+.tags li:hover span  {
+	display: none;
 }
 
 /* Responsive layout */
@@ -211,18 +212,15 @@ footer > p {
 		float: right;
 	}
 	
+	.tags li:hover span {
+		visibility: visible;
+		background-color: #B2A2AD;
+		color: #512443;
+		font-size: inherit;
+		z-index: 3;
+		width: 150px;
+		min-height: 1.5em;
+		padding: 1em;
+	}
+}
 	
-}
-@media screen and (device-width: 320px), 
-	   screen  and (max-width: 768px){
-	body > header, body > main, body > footer {
-		width: 100%;
-		padding: 15px;
-	}
-	article, .card {
-		width: 100%;
-	}
-	.tags li:hover span  {
-		display: none;
-	}
-}
