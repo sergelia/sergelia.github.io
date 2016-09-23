@@ -1,0 +1,228 @@
+/* Quick reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+header, main, footer, aside, nav {
+	display: block;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size:  14px;
+}
+
+button, .button {
+	-webkit-appearance: none;
+	border: none;
+	background-color: transparent;
+	padding: 1em;
+}
+
+/* Type */
+
+@import 'https://fonts.googleapis.com/css?family=Francois+One|Lato';
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, figcaption, blockquote, th {
+	font-family: 'Francois One', sans-serif;
+	font-weight: 700;
+	padding: 0.5em 0;
+}
+p, span, li, cite, td {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+p {
+	font-size: 16px;
+	margin: .3em 0;
+}
+h1, .h1 {
+	font-size:  2em;
+	margin-bottom: 0.5em;
+}
+h2, .h2 {
+	font-size:  1.8em;
+	margin-bottom: 0.4em;
+}
+h3, .h3 {
+	font-size:  1.6em;
+	margin-bottom: 0.3em;
+}
+h4, .h4 {
+	font-size:  1.4em;
+	margin-bottom: 0.2em;
+}
+h5, .h5 {
+	font-size:  1.2em;
+	margin-bottom: 0.15em;
+}
+h6, .h6 {
+	font-size:  1em;
+	margin-bottom: 0.1em;
+}
+a, .link {
+	color: #512443;
+	text-decoration: none;
+	transition: color 1s;
+}
+a:hover, a:active, a:focus,
+.link:hover {
+	color: #6B2F58;
+	text-decoration: none;
+}
+article > main {
+	margin-left: 0;
+}
+
+article {
+	clear: both;
+}
+
+/* Sidebar */
+
+header h1 {
+	font-size: 3em;
+	color: #252525;
+	margin-top: 1em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+header h2 {
+	margin-top: 0;
+	color:  #464646;
+	font-weight: 400;
+}
+.main-nav ul {
+	font-size: 0;
+}
+.main-nav ul li {
+	display:  block;
+	width:  100%;
+	list-style:  none;
+	font-size: 16px;
+}
+.main-nav ul li a {
+	display: block;
+	width: 100%;
+	height: 1.5em;
+	line-height: 1.5;
+}
+
+/* Footer */
+
+footer {
+	text-align: center;
+}
+footer > p {
+	padding: 1em;
+}
+/* Tags */
+
+.tags li {
+	position: relative;
+	float: left;
+	height: 50px;
+	margin: 5px;
+	padding: 10px;
+	border: 1px solid #512443;
+	background-color: #e7e7e7;
+	color: #512443;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 25px;
+	border-radius: 5px;
+	list-style: none;
+}
+.tags li span {
+	visibility: hidden;
+	position: absolute;
+	margin-top: 10px;
+	right: -150px;
+	width: 0;
+	font-size: 0;
+	transition:  background-color 1s, visibility 1s;
+}
+.tags li:hover span {
+	visibility: visible;
+	background-color: #B2A2AD;
+	color: #512443;
+	font-size: inherit;
+	z-index: 3;
+	width: 150px;
+	min-height: 1.5em;
+	padding: 1em;
+}
+
+/* Cards */
+
+.card {
+	padding: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 25%; 
+	float: left;
+}
+.card > img {
+	max-width: 100%;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.card > p {
+	line-height: 1.5;
+}
+.card > a {
+	font-size: 14px;
+	line-height: 2em;
+	font-family: 'Francois One', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* Responsive layout */
+@media screen and (min-width: 768px) {
+	body > header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 20%;
+		padding: 1em;
+	}
+	body > main {
+		margin-left: 20%;
+	}
+	article > main {
+		float:  left;
+	}
+	main {
+		height:  100%;
+		width:  80%;
+	}
+	body > footer {
+		position: fixed;
+		bottom: 14px;
+		width: 20%;
+	}
+	article > aside {
+		height: 100%;
+		width: 20%;
+		float: right;
+	}
+	
+	
+}
+@media screen and (max-device-width: 768px), 
+	   screen  and (max-width: 768px){
+	body > header, body > main, body > footer {
+		width: 100%;
+		padding: 15px;
+	}
+	article, .card {
+		width: 100%;
+	}
+	.tags li:hover span  {
+		display: none;
+	}
+}
