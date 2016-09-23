@@ -220,8 +220,7 @@ body > main {
 	
 	
 }
-@media screen and (device-width: 360px)
-  and (orientation: portrait), 
+@media screen and (device-width: 360px),
 	   screen  and (max-width: 768px){
 	body > header, body > main, body > footer {
 		width: 100%;
