@@ -43,7 +43,6 @@
 		var removeClass = new Event('removeClass');
 		
 		window.document.addEventListener('click', function(e) {
-			e.preventDefault();
 			if ([].indexOf.call(buttons, e.target) === -1) {
 				container.dispatchEvent(removeClass);
 			}

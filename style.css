@@ -462,13 +462,3 @@ a.icon:last-child  {
 		padding-top: 30px;
 	}
 }
-
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: landscape) {
-  	main {
-  		display: none;
-  	}
-  }
