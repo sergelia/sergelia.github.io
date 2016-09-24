@@ -70,25 +70,34 @@
 				<img src="./images/promptbattle.png" alt="PromptBattle landing page">
 				<h1 class="h3">PromptBattle</h1>
 				<p class="description">A battleground for writing prompts and short prose in general. Made 99.9% without help of frameworks or plugins, to truly get a grasp on vanilla JavaScript. In earlier stages, it included a custom module management system I plan on re-doing and publishing separately.</p>
-				<a href="./project/promptbattle">Repository</a>
+				<a href="./promptbattle">Repository</a>
 			</section>
 			<section class="project card">
 				<figure>
 					<img src="./images/dimensions.png" alt="The Dimensions messenger">
-					<figcaption>Dimensions app <br />
-						<a href="./dimensions/" class="icon iCode">See code</a>
+					<figcaption>
+					<strong class="h3">Dimensions app </strong>
+						<a href="./dimensions/" class="icon iCode" target="_blank">See code</a>
 						<a href="#" data-action="preview" data-target="dimensions" class="icon iPreview">Open preview</a>
 					</figcaption>
 				</figure>
 				<h1 class="h3">Dimensions</h1>
 				<p class="description">The proof-of-concept for my diploma project, Dimensions was a somewhat clumsy attempt at making a web messaging client with Node and Neo4j in order to demonstrate a multi-dimensional approach to conversation.</p>
-				<a href="./project/dimensions/">Repository</a>
+				<a href="./dimensions/">Repository</a>
 			</section>
 			<section class="project card">
-				<img src="./images/n-framework.png" alt="A framework demo">
+				<figure>
+					<img src="./images/n-framework.png" alt="A framework demo">
+					<figcaption>
+					<strong class="h3">N-Framework</strong>
+						<a href="./n_framework/" class="icon iCode" target="_blank">See code</a>
+						<a href="#" data-action="preview" data-target="n_framework" class="icon iPreview">Open preview</a>
+					</figcaption>
+				</figure>
+
 				<h1 class="h3">N-Framework</h1>
 				<p class="description">My UI framework, started as a SCSS learning project and now used wherever possible. Boasts color and the ocassional clever mixin.</p>
-				<a href="./project/n-framework/">Repository</a>
+				<a href="./n-framework/">Repository</a>
 			</section>
 			
 		</article>
@@ -99,7 +108,28 @@
 	</main>
 	<footer>
 		<p>Copyright: Nusa Babic 2016</p>
-	<footer>
+	</footer>
+	<section id="preview_pane">
+		<a id="preview_close" class="icon iClose">Close</a>
+		<article id="dimensions" class="card preview-content">
+			<div class="main">
+				<h1 class="h3">Dimensions</h1>
+				<p class="description">The proof-of-concept for my diploma project, Dimensions was a somewhat clumsy attempt at making a web messaging client with Node and Neo4j in order to demonstrate a multi-dimensional approach to conversation.</p>
+				<a href="./project/dimensions/">Repository</a>
+			</div>
+		</article>
+		<article id="n_framework" class="card preview-content">
+
+			<img src="./images/n-framework.png" alt="A framework demo">
+				
+			<div class="main">
+				<h1 class="h3">N-Framework</h1>
+				<p class="description">My UI framework, started as a SCSS learning project and now used wherever possible. Boasts color and the ocassional clever mixin.</p>
+				<a href="./n-framework/">Repository</a>
+			</div>
+		</article>
+			
+	</section>
 	<script src="main.js"></script>
 </body>
 </html>

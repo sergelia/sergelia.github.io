@@ -70,8 +70,48 @@
 				}
 			}
 		});
-		
 	};
-
 	Tagger('tags');
+
+	// Preview modal
+
+	var Modal = function(id) {
+		var pane = document.getElementById('preview_pane');
+		var close_button = document.getElementById('preview_close');
+		var previews = pane.children;		
+		pane.addEventListener('click', function(e) {
+			if (e.target === pane || e.target === close_button)  {
+				_closeModal(pane, previews);
+			}
+		});
+
+		for (var i = 0; i < previews.length; i++) {
+			if (previews[i].getAttribute('id') === id) {
+				console.log(previews[i]);
+				_toggleElementClass(previews[i], 'active');
+				pane.classList.add('active');
+			}
+		}
+	};
+	var _closeModal = function(pane, previews) {
+		for (var p = 0; p < previews.length; p++) {
+			if (previews[p].classList.contains('active')) {
+				previews[p].classList.remove('active');
+			}
+		}
+		pane.classList.remove('active');
+	};
+	var projects = document.getElementsByClassName('project');
+	for (var p = 0; p < projects.length; p++) {
+		var anchors = projects[p].getElementsByTagName('a');
+		for (var a = 0; a < anchors.length; a++) {
+			if (typeof anchors[a].getAttribute('data-action') !== "undefined") {
+				anchors[a].addEventListener('click', function(e) {
+					var target_id = e.target.getAttribute('data-target');
+					Modal(target_id);
+				});
+			} 
+		}
+	}
+
 })(this);
