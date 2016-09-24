@@ -420,3 +420,13 @@ a.icon:last-child  {
 		background-color: #000;
 	}
 }
+
+@media screen and (device-width: 360px) and (orientation: landscape),
+	   screen and (min-width: 768px) and (max-width: 1200px) {
+	body > header > h1 {
+		font-size: 2em;
+	}
+	article .card {
+		width: 45%;
+	}
+}
