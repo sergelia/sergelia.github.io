@@ -43,7 +43,7 @@
 		var removeClass = new Event('removeClass');
 		
 		window.document.addEventListener('click', function(e) {
-			e.stopPropagation();
+			e.preventDefault();
 			if ([].indexOf.call(buttons, e.target) === -1) {
 				container.dispatchEvent(removeClass);
 			}
@@ -80,6 +80,7 @@
 		var close_button = document.getElementById('preview_close');
 		var previews = pane.children;		
 		pane.addEventListener('click', function(e) {
+			e.preventDefault();
 			if (e.target === pane || e.target === close_button)  {
 				_closeModal(pane, previews);
 			}
@@ -107,6 +108,7 @@
 		for (var a = 0; a < anchors.length; a++) {
 			if (typeof anchors[a].getAttribute('data-action') !== "undefined") {
 				anchors[a].addEventListener('click', function(e) {
+					e.preventDefault();
 					var target_id = e.target.getAttribute('data-target');
 					Modal(target_id);
 				});
