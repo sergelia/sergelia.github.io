@@ -131,7 +131,7 @@ footer > p {
 body > main {
 	padding: 0 2em;
 }
-body > main :last-child {
+body > main > :last-child {
 	margin-bottom: 2em;
 }
 
@@ -144,10 +144,26 @@ article {
 }
 
 /* Tags */
-
-.tags li {
+.tags {
+	z-index: 10;
 	position: relative;
-	float: left;
+}
+.tags li {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	position: relative;
+	height: 55px;
+	list-style: none;
+	overflow: hidden;
+	text-align: justify;
+	z-index: initial;
+	cursor: pointer;
+}
+.tags > li > span:first-child {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
 	height: 50px;
 	margin: 5px;
 	padding: 10px;
@@ -158,28 +174,40 @@ article {
 	letter-spacing: 1px;
 	line-height: 25px;
 	border-radius: 5px;
-	list-style: none;
+	z-index: -1;
 }
-.tags li span {
-	visibility: hidden;
-	position: absolute;
-	margin-top: 10px;
-	right: -150px;
+.tags > li > ul {
+	display: inline-block;
+	height: 100%;
 	width: 0;
-	font-size: 0;
-	transition:  background-color 1s, visibility 1s;
 }
-.tags li:hover span {
-	visibility: visible;
-	background-color: #B2A2AD;
-	color: #512443;
-	font-size: inherit;
-	z-index: 3;
-	width: 150px;
-	min-height: 1.5em;
-	padding: 1em;
+.tags > li.active {
+	overflow: visible;
+}
+.tags > li.active > span:first-child {
+	background-color: #F4E864;
+	color: #000000;
 }
 
+.tags li.active ul {
+	vertical-align: middle;
+	width: auto;
+	list-style: none;
+	font-size: 0;
+}
+.tags li.active ul li {
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 10px;
+	height: 100%;
+	margin: 4px;
+	font-size: 14px;
+	text-transform: lowercase;
+	letter-spacing: 1;
+	line-height: 25px;
+	border: 1px solid #F4E864;
+}
 /* Cards */
 
 .card {
