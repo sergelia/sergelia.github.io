@@ -293,6 +293,7 @@ article {
 	height: 80%;
 	margin-left: 30%;
 	margin-top: 5%;
+	overflow: auto;
 }
 #preview_pane.active .preview-content.active .main {
 	padding: 30px;
