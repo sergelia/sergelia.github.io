@@ -12,7 +12,9 @@ html, body {
 	height: 100%;
 	font-size:  14px;
 }
-
+body {
+	background-color: #F4F2F2; /* body */
+}
 button, .button {
 	-webkit-appearance: none;
 	border: none;
@@ -22,11 +24,10 @@ button, .button {
 
 /* Type */
 
-@import 'https://fonts.googleapis.com/css?family=Francois+One|Lato';
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, figcaption, blockquote, th {
-	font-family: 'Francois One', sans-serif;
-	font-weight: 700;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
 	padding: 0.5em 0;
 }
 p, span, li, cite, td {
@@ -36,7 +37,8 @@ p, span, li, cite, td {
 
 p {
 	font-size: 16px;
-	margin: .3em 0;
+	line-height: 1.5;
+	margin: .5em 0;
 }
 h1, .h1 {
 	font-size:  2em;
@@ -72,27 +74,28 @@ a:hover, a:active, a:focus,
 	color: #6B2F58;
 	text-decoration: none;
 }
-article > main {
-	margin-left: 0;
-}
-
-article {
-	clear: both;
-}
 
 /* Sidebar */
 
-header h1 {
-	font-size: 3em;
-	color: #252525;
+header {
+	background-color: #000; /* header */
+	text-align: center;
+}
+
+header > h1 {
+	font-size: 6em;
+	line-height: 1;
+	font-weight: 400;
+	color: #F4E864;
 	margin-top: 1em;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
 header h2 {
 	margin-top: 0;
-	color:  #464646;
+	color:  #868686;
 	font-weight: 400;
+	margin-bottom: 3em;
 }
 .main-nav ul {
 	font-size: 0;
@@ -108,6 +111,10 @@ header h2 {
 	width: 100%;
 	height: 1.5em;
 	line-height: 1.5;
+	color: #868686;
+}
+.main-nav ul li a:hover {
+	color: #F3E085;
 }
 
 /* Footer */
@@ -122,7 +129,18 @@ footer > p {
 /* Main content area */
 
 body > main {
-	padding-bottom: 2em;
+	padding: 0 2em;
+}
+body > main :last-child {
+	margin-bottom: 2em;
+}
+
+article > main {
+	margin-left: 0;
+}
+
+article {
+	clear: both;
 }
 
 /* Tags */
@@ -165,16 +183,38 @@ body > main {
 /* Cards */
 
 .card {
+	width: 28%; 
 	padding: 0;
-	margin-right: 10px;
+	margin-right: 2%;
 	margin-bottom: 10px;
-	width: 25%; 
 	float: left;
 }
-.card > img {
+.card > figure {
+	position: relative;
+	width:  100%;
+}
+.card > figure > img, .card > img {
 	max-width: 100%;
 	width: 100%;
 	margin-bottom: 10px;
+}
+.card > figure > figcaption {
+	opacity: 0;
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding: 2em;
+	background-color: rgba(0,0,0,.6);
+	color: rgba(255,255,255,.7);
+	transition: opacity 1s;
+}
+.card > figure:hover > figcaption {
+	opacity: 1;
+	display: block;
 }
 .card > p {
 	line-height: 1.5;
@@ -185,6 +225,36 @@ body > main {
 	font-family: 'Francois One', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+/* Icons */
+
+a.icon {
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+	margin-right: 1em;
+	font-size: 1em;
+	text-indent: -9999px;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: color .5s;
+}
+a.icon:last-child  {
+	margin-right: 0;
+}
+
+.icon.iCode {
+	background-image: url(./images/icons/code.png);
+}
+.icon.iPreview {
+	background-image: url(./images/icons/preview.png);
+}
+
+::selection {
+	background: #F4E864;
+	color: #000;
 }
 
 /* Responsive layout */
@@ -202,6 +272,7 @@ body > main {
 	}
 	article > main {
 		float:  left;
+		margin-top: 2em;
 	}
 	main {
 		height:  100%;
@@ -215,7 +286,8 @@ body > main {
 	article > aside {
 		height: 100%;
 		width: 20%;
-		float: right;
+		margin-top: 2em;
+		float:  left;
 	}
 	
 	
