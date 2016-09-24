@@ -367,7 +367,7 @@ a.icon:last-child  {
 	
 }
 @media screen and (device-width: 360px),
-	   screen  and (max-width: 768px){
+	   screen and (max-width: 768px){
 	body > header, body > main, body > footer {
 		width: 100%;
 		padding: 15px;
@@ -428,5 +428,33 @@ a.icon:last-child  {
 	}
 	article .card {
 		width: 45%;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.card {
+		margin-bottom: 3em;
+	}
+	.card:last-child {
+		margin-bottom: 0;
+	}
+	.card figure, .card > img {
+		max-width: 45%;
+		width: 45%;
+		margin-right: 5%;
+		float: left;
+	}
+	.card main, .card .main {
+		width: 50%;
+		float: left;
+	}
+	.card h1 {
+		padding-top: 0;
+	}
+	.card > figure > figcaption > strong {
+		font-size: 1em;
+	}
+	#preview_pane.active .preview-content.active img {
+		padding-top: 30px;
 	}
 }
