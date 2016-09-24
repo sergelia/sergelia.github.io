@@ -421,14 +421,25 @@ a.icon:last-child  {
 		background-color: #000;
 	}
 }
-
+@media screen and (min-width: 540px) and (max-width: 768px) {
+	body > header, body > main, body > footer {
+		width: 100%;
+		padding: 15px;
+	}
+	
+}
 @media screen and (device-width: 360px) and (orientation: landscape),
 	   screen and (min-width: 540px) and (max-width: 1200px) {
+
 	body > header > h1 {
 		font-size: 2em;
 	}
 	article .card {
 		width: 45%;
+	}
+	#preview_pane.active  .preview-content.active {
+		width: 70%;
+		margin-left: 15%;
 	}
 }
 
@@ -439,23 +450,25 @@ a.icon:last-child  {
 	.card:last-child {
 		margin-bottom: 0;
 	}
-	.card figure, .card > img {
-		max-width: 45%;
-		width: 45%;
-		margin-right: 5%;
-		float: left;
-	}
-	.card main, .card .main {
-		width: 50%;
-		float: left;
-	}
+	
 	.card h1 {
 		padding-top: 0;
 	}
 	.card > figure > figcaption > strong {
 		font-size: 1em;
+		margin-top: .5em;
 	}
 	#preview_pane.active .preview-content.active img {
 		padding-top: 30px;
 	}
 }
+
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+  	main {
+  		display: none;
+  	}
+  }
