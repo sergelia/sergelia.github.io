@@ -44,8 +44,6 @@
 		
 		window.document.addEventListener('click', function(e) {
 			e.stopPropagation();
-			console.log('target: ' + e.target);
-			console.log([].indexOf.call(buttons, e.target));
 			if ([].indexOf.call(buttons, e.target) === -1) {
 				container.dispatchEvent(removeClass);
 			}
