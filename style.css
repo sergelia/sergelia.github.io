@@ -262,35 +262,6 @@ article {
 	letter-spacing: 1px;
 }
 
-/* NL select box */
-.select-year {
-	display: inline;
-	text-align: center;
-	vertical-align: top;
-	width: auto;
-    border: none;
-    box-shadow: none;
-    font-family: inherit;
-    font-size: inherit;
-    overflow: hidden;
-    background-color: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-}
-.select-year:focus {
-	outline: none;
-	width: auto;
-}
-.select-year option {
-	-webkit-appearance:none; 
-	-moz-appearance:none; 
-	 appearance:none;
-	display: block;
-	font-size: .5em;
-	padding: 6px;
-}
 /* Preview */
 #preview_pane, #preview_pane .preview-content {
 	display: none;
@@ -384,24 +355,6 @@ a.icon:last-child  {
 		position: fixed;
 		bottom: 14px;
 		width: 20%;
-	}
-
-	.bio {
-		font-size: 0;
-	}
-	.bio main, .bio aside {
-		display: inline-block;
-		vertical-align: top;
-	}
-	.bio main {
-		width: 60%;
-		margin-top: 2em;
-	}
-	.bio aside {
-		width: 18%;
-		padding: 1%;
-		margin-top: 2em;
-		margin-left: 20%;
 	}
 	
 	
