@@ -95,7 +95,7 @@
 		});
 
 		for (var i = 0; i < previews.length; i++) {
-			if (previews[i].getAttribute('id') === id) {
+			if (previews[i].getAttribute('data-id') === id) {
 				console.log(previews[i]);
 				_toggleElementClass(previews[i], 'active');
 				pane.classList.add('active');
@@ -169,15 +169,20 @@ var _renderTemplate = function(param, arr) {
 		for (var key in arr[i]) {
 			var tokens = _matchAttribute('data-'+key, _, template.getElementsByTagName("*"));
 			var previewTokens = _matchAttribute('data-'+key, _, preview.getElementsByTagName("*"));
-			/*console.log('Key: ', key);
-			console.log('Tokens: ', tokens);*/
+
+			if (key === 'id') {
+				preview.setAttribute('data-id', arr[i][key]);
+			}
+
 			for (var k = 0; k < tokens.length; k++) {
 				//console.log(key);
 				switch (key) {
 					case 'id' : 
 						tokens[k].setAttribute('data-target', arr[i][key]);
 						break;
-					case 'title' || 'description' : 
+					case 'title' :
+					case 'description' : 
+						console.log(arr[i][key]);
 						tokens[k].innerHTML = arr[i][key];
 						break;
 					case 'img' :
@@ -190,12 +195,13 @@ var _renderTemplate = function(param, arr) {
 						break;
 				}
 			}
+
 			for (var k = 0; k < previewTokens.length; k++) {
+				
 				switch (key) {
-					case 'id' : 
-						previewTokens[k].setAttribute('data-target', arr[i][key]);
-						break;
-					case 'title' || 'description' : 
+					
+					case 'title' : 
+					case 'description' : 
 						previewTokens[k].innerHTML = arr[i][key];
 						break;
 					case 'img' :
