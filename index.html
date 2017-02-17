@@ -21,13 +21,27 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<article id="bio">
-			<h2>I am a web developer currently focused on mastering client and server-side JavaScript.</h2>				
+	<main id="main">
+		<article id="bio" class="bio">
+			
+			<main>
+				<h2>I'm a web developer based in Belgrade, Serbia. <br />
+				<select name="data-year" id="select_year" class="select-year">
+				<option value="2016" selected>At the moment</option>
+				<option value="2015">A year ago</option>
+				<option value="2014">Two years ago</option>
+				<option value="2013">In 2013</option>
+			</select>, I <span data-content="toBe">am</span> focused on <span data-content="focus">mastering vanilla JavaScript</span>. </h2>
+
+
+			</main>
+			<aside>
+				
+			</aside>
 		</article>
 		<article id="skills">
-			<h1 class="h2">I work with</h1>
-			<ul id="tags" class="tags">
+			<h1 class="h2">I <span data-content="toWork">work</span> with</h1>
+			<ul id="tags" class="tags" data-content="skills">
 				<li>
 					<span>JavaScript</span>
 					<ul><li>ES6</li><li>Angular 1</li><li>Node</li></ul>
@@ -53,53 +67,23 @@
 			</ul>
 		</article>
 		<article id="projects">
-			<h1 class="h2">I've worked on</h1>
-			<section class="project card">
-				<figure>
-					<img src="./images/promptbattle.png" alt="PromptBattle">
-					<figcaption>
-					<strong class="h3">PromptBattle</strong>
-						<a href="./promptbattle/" class="icon iCode" target="_blank">See code</a>
-						<a href="#" data-action="preview" data-target="promptbattle" class="icon iPreview">Open preview</a>
-					</figcaption>
-				</figure>
-				<div class="main">
-					<h1 class="h3">PromptBattle</h1>
-					<p class="description">A battleground for writing prompts and short prose in general. Made 99.9% without help of frameworks or plugins, to truly get a grasp on vanilla JavaScript.</p>
-					<a href="./promptbattle/">Repository</a>
-				</div>
-			</section>
-			<section class="project card">
-				<figure>
-					<img src="./images/dimensions.png" alt="The Dimensions messenger">
-					<figcaption>
-					<strong class="h3">Dimensions app </strong>
-						<a href="./dimensions/" class="icon iCode" target="_blank">See code</a>
-						<a href="#" data-action="preview" data-target="dimensions" class="icon iPreview">Open preview</a>
-					</figcaption>
-				</figure>
-				<div class="main">
-				<h1 class="h3">Dimensions</h1>
-					<p class="description">The proof-of-concept for my diploma project, Dimensions was a somewhat clumsy attempt at making a web messaging client with Node and Neo4j in order to demonstrate a multi-dimensional approach to conversation.</p>
-					<a href="./dimensions/">Repository</a>
-				</div>
-			</section>
-			<section class="project card">
-				<figure>
-					<img src="./images/n-framework.png" alt="A framework demo">
-					<figcaption>
-					<strong class="h3">N-Framework</strong>
-						<a href="./n_framework/" class="icon iCode" target="_blank">See code</a>
-						<a href="#" data-action="preview" data-target="n_framework" class="icon iPreview">Open preview</a>
-					</figcaption>
-				</figure>
-				<div class="main">
-					<h1 class="h3">N-Framework</h1>
-					<p class="description">My UI framework, started as a SCSS learning project and now used wherever possible. Boasts color and the ocassional clever mixin.</p>
-					<a href="./n-framework/">Repository</a>
-				</div>
-			</section>
+			<h1 class="h2">I <span data-content="toWork">work</span> on</h1>
 			
+			<section class="project card" id="template-projects">
+				<figure>
+					<img data-img src="" alt="">
+					<figcaption>
+					<strong class="h3" data-title></strong>
+						<a href="" class="icon iCode" target="_blank" data-link>See code</a>
+						<a href="#" data-action="preview" data-target data-id class="icon iPreview">Open preview</a>
+					</figcaption>
+				</figure>
+				<div class="main">
+					<h1 class="h4" data-title></h1>
+					<p class="description" data-description></p>
+					<a href="" data-link>Repository</a>
+				</div>
+			</section>
 		</article>
 		<article id="downloads">
 			<h1 class="h2">Download</h1>
@@ -111,35 +95,21 @@
 	</footer>
 	<section id="preview_pane">
 		<a id="preview_close" class="icon iClose">Close</a>
-		<article id="promptbattle" class="card preview-content">
-
-			<img src="./images/promptbattle.png" alt="PromptBattle">
+		
+		
+		<article class="card preview-content" id="template-preview" data-id>
+			
+			<img data-img src="" alt="">
 				
 			<div class="main">
-				<h1 class="h3">PromptBattle</h1>
-				<p class="description">A battleground for writing prompts and short prose in general. Made 99.9% without help of frameworks or plugins, to truly get a grasp on vanilla JavaScript.</p>
-				<a href="./promptbattle/">Repository</a>
-			</div>
-		</article>
-		<article id="dimensions" class="card preview-content">
-			<div class="main">
-				<h1 class="h3">Dimensions</h1>
-				<p class="description">The proof-of-concept for my diploma project, Dimensions was a somewhat clumsy attempt at making a web messaging client with Node and Neo4j in order to demonstrate a multi-dimensional approach to conversation.</p>
-				<a href="./dimensions/">Repository</a>
-			</div>
-		</article>
-		<article id="n_framework" class="card preview-content">
-
-			<img src="./images/n-framework.png" alt="A framework demo">
-				
-			<div class="main">
-				<h1 class="h3">N-Framework</h1>
-				<p class="description">My UI framework, started as a SCSS learning project and now used wherever possible. Boasts color and the ocassional clever mixin.</p>
-				<a href="./n-framework/">Repository</a>
+				<h1 class="h3" data-title></h1>
+				<p class="description" data-description></p>
+				<a href="" data-link>Repository</a>
 			</div>
 		</article>
 			
 	</section>
+
 	<script src="main.js"></script>
 </body>
 </html>
